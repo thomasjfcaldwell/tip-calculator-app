@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="/styles.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<main class="main">
+			<!-- Calculator wrapper start -->
+			<div class="calculator__wrapper">
+				<div class="calculator__logo-container">
+					<img src="images/logo.svg" alt="" class="calculator__logo" />
+				</div>
+				<!-- Calculator Container start -->
+				<div class="calculator__container">
+					<!-- Calculator input -->
+					<div class="calculator__input">
+						<!-- Calculator bill input -->
+						<div class="bill__input-container">
+							<h5 class="bill__input-header">Bill</h5>
+
+							<input
+								type="text"
+								id="userInput"
+								placeholder="0"
+								class="bill__input"
+							/>
+						</div>
+						<!-- Calculator bill input end -->
+						<!-- Calculator tip input -->
+						<div class="tip__selection-container">
+							<h5>Select Tip %</h5>
+							<ul class="tip__selection-list">
+								<li class="tip__selection-item" value="5">5%</li>
+								<li class="tip__selection-item" value="10">10%</li>
+								<li class="tip__selection-item active" value="15">15%</li>
+								<li class="tip__selection-item" value="25">25%</li>
+								<li class="tip__selection-item" value="50">50%</li>
+								<li class="tip__selection-item" id="custom__button">
+									<input
+										type="text"
+										class="custom__input"
+										id="custom__input"
+										placeholder="CUSTOM"
+									/>
+								</li>
+							</ul>
+						</div>
+						<!-- Calculator tip input end -->
+						<!-- Calculator people amount input -->
+						<div class="people__input-container">
+							<p>Number of People</p>
+							<input type="text" id="peoples" class="people__input" />
+						</div>
+						<!-- Calculator people amount input end -->
+					</div>
+					<!-- Calculator input end -->
+					<!-- Calculator totals container -->
+					<div class="calculator__totals-container">
+						<div class="tip__person-container">
+							<div class="tip__amount-container">
+								<div class="tip__amount-text">
+									<h4>Tip Amount</h4>
+									<p>/ person</p>
+								</div>
+								<h2 id="tip__amount" class="tip__amount">0</h2>
+							</div>
+							<div class="person__total-container">
+								<div class="people__total-text">
+									<h4>Total</h4>
+									<p>/ person</p>
+								</div>
+								<h2 id="total__person" class="total__person">0</h2>
+							</div>
+						</div>
+						<div class="reset__button-container">
+							<button class="reset__button" id="reset__button">Reset</button>
+						</div>
+					</div>
+					<!-- calculator totals container ends -->
+				</div>
+				<!-- calculator container ends -->
+			</div>
+			<!-- calculator wrapper ends -->
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>

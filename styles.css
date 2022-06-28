@@ -1,0 +1,307 @@
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    margin:0;
+    font-family: 'Space Mono', monospace;
+    font-size:12px;
+    box-sizing: border-box;
+}
+
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+    height:100vh;
+}
+.calculator__wrapper {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    padding-top:3rem;
+}
+.calculator__logo-container {
+   margin: 4rem auto;
+}
+.calculator__logo {
+    width:4.5rem;
+}
+
+.calculator__container {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    padding:2rem;
+    width:50%;
+    margin:0 auto;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    filter: drop-shadow(1px 1px 10px #00002713);
+}
+@media (min-width: 20em) and (max-width:45rem)  {
+    .calculator__wrapper {
+            padding-top: 1rem;
+        }
+    .calculator__logo-container {
+            margin: 2rem auto;
+        }
+    .calculator__container {
+        grid-template-columns: 1fr;
+        width:100%;
+    }
+}
+
+
+/*   inputs Container */
+.calculator__input {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+
+}
+/*   bill input Container */
+
+.bill__input-container {
+    display:flex;
+    flex-direction: column;
+    width:90%;
+}
+.bill__input-container::after {
+    content: url(/images/icon-dollar.svg);
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}
+.bill__input-header {
+    margin:0.2rem 0;
+    color: hsl(184, 14%, 56%);
+}
+.bill__input {
+    border:none;
+    background-color: hsl(189, 41%, 97%);
+    padding:0.5rem;
+    text-align: right;
+    font-size:1.2rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+}
+
+/*   Tip Selection Container */
+.tip__selection-container {
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+.tip__selection-container > h5 {
+    margin:0.5rem 0;
+    color: hsl(184, 14%, 56%);
+}
+.tip__selection-list{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap:0.8rem;
+    /* background-color: brown; */
+    width:100%;
+    margin:0 auto;
+    padding:0;
+}
+.tip__selection-item {
+    list-style: none;
+    width:100%;
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: lighter;
+    padding:0.2rem;
+    border-radius: 0.4rem;
+    color: white;
+    letter-spacing: 0.07rem;
+}
+.tip__selection-item:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.tip__selection-item:active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.tip__selection-item:last-of-type {
+color: hsl(184, 14%, 56%);
+
+padding:0;
+}
+.hidden {
+    display:none;
+}
+.custom__input {
+    width:100%;
+    background-color: hsl(189, 41%, 97%);
+    border:none;
+    text-align: center;
+    font-size: 0.95rem;
+    height:100%;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+/*   Num Of People Container */
+
+
+.people__input-container{
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+.people__input-container::after {
+    content: url(/images/icon-dollar.svg);
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
+}
+
+
+.people__input-container > p {
+    margin: 0.2rem 0;
+    color: hsl(184, 14%, 56%);
+}
+.people__input{
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    padding: 0.5rem;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+}
+
+
+@media (min-width: 20em) and (max-width:60rem) {
+    .calculator__wrapper {
+        padding-top: 1rem;
+    }
+
+    .calculator__logo-container {
+        margin: 2rem auto;
+    }
+
+    .calculator__container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .bill__input-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tip__selection-container{
+        width:100%;
+    }
+    .tip__selection-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);  
+    }
+    .people__input-container {
+        margin: 1.5rem auto;
+        width:100%;
+    }
+    .people__input {
+        font-size: 1rem;
+    }
+}
+
+
+/*   Totals Container */
+
+.calculator__totals-container{
+    background-color: hsl(183, 100%, 15%);
+    width: 100%;
+    border-radius: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tip__person-container{
+}
+
+.tip__amount-container {
+    width:80%;
+    margin: 0rem auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip__amount-text > h4 {
+    margin:0;
+    font-size:0.9rem;
+    color:white;
+}
+.tip__amount-text> p {
+    margin: 0;
+    font-size: 0.7rem;
+    color:hsl(184, 14%, 56%);
+}
+.tip__amount {
+    font-size: 2rem;
+    color:hsl(172, 67%, 45%)
+}
+
+
+
+.person__total-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem auto;
+    align-items: center;
+}
+.people__total-text > h4 {
+    margin-top: -10px;
+    font-size: 0.9rem; 
+    color:white; 
+}
+
+.people__total-text > p {
+    margin-top: -20px;
+    font-size: 0.7rem;
+    color: hsl(184, 14%, 56%);
+}
+.total__person{
+    font-size:2rem;
+     margin-top: -10px;
+     color:hsl(172, 67%, 45%);
+}
+
+
+.reset__button-container {
+    width:80%;
+    margin:5rem auto 1.5rem auto;
+}
+.reset__button {
+    width:100%;
+    display:block;
+    background-color: hsl(172, 67%, 45%);
+    border-style: none;
+    padding-block:0.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 20em) and (max-width:45rem) {
+    .reset__button-container {
+            width: 90%;
+            margin: 1rem auto 1.5rem auto;
+        }
+}
